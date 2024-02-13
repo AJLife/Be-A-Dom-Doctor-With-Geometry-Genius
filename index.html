@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Gem</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-8">
+    <header>
+        
+    </header>
+    <main > 
+        <!-- main content container -->
+        <div class="flex flex-col md:flex-row">
+             <!-- shape card container -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-5">
+                <!-- Card name: Triangle -->
+                <div class="card card-compact w-full bg-[#FBBCED] text-[#3138ff]  shadow-xl">
+                    <figure>
+                        <img src="/geometry-genius-resources/images/triangle.png" class="mt-6" alt="Triangle" /></figure>
+                    <div class="card-body ">
+                      <h2 class="text-center pt-3 text-2xl">Triangle</h2>
+                      <p class="text-center pb-2 text-xl">Area = 0.5 X b X h</p>                      
+                       <div class="flex pb-3 items-center justify-center">
+                        <input id="triangle-base" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="b">
+                        <span class="mr-3 ml-2 text-2xl">cm</span>
+                        <input id="triangle-height" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="h">
+                        <span class="text-2xl ml-2">cm</span>
+                       </div>
+                       <div>
+                        <p class="text-center text-3xl">Area:
+                        <span id="triangle-area"></span>
+                        <span>cm<sup>2</sup></span>                       
+                        </p>
+                       </div>                
+                      <div class="card-actions">
+                        <button onclick="calculateTriangleArea()" class="btn  w-full bg-[#1090D8] text-[#fff] text-[20px]">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- Card name: Rectangle -->
+                <div class="card card-compact w-86  bg-sky-400 shadow-xl">
+                  <figure>
+                      <img src="/geometry-genius-resources/images/rectangle.png" class="mt-6" alt="Shoes" /></figure>
+                  <div class="card-body ">
+                    <h2 class="text-center text-2xl">Rectangle</h2>
+                    <p class="text-center text-xl">Area (A) = W X I</p>                      
+                     <div class="flex pb-3 items-center justify-center">
+                      <input id="rectangle-base" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="length">
+                      <span class="mr-3 ml-2 text-2xl">cm</span>
+                      <input id="rectangle-height" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="width">
+                      <span class="text-2xl ml-2 ">cm</span>
+                     </div>
+                     <div>
+                      <p class="text-center text-3xl">Area:
+                      <span id="rectangle-area"></span>
+                      <span>cm<sup>2</sup></span>                       
+                      </p>
+                     </div>                
+                    <div class="card-actions">
+                      <button onclick="calculateRectangleArea()" class="btn w-full bg-[#1090D8] text-[#fff] text-[20px]">Calculate</button>
+                    </div>
+                  </div>
+              </div>
+                <!-- Card name: Parallelogram -->
+                <div class="card card-compact w-86 bg-base-100 shadow-xl">
+                  <figure>
+                      <img src="/geometry-genius-resources/images/triangle.png" alt="Shoes" /></figure>
+                  <div class="card-body ">
+                    <h2 class="text-center pt-3 text-2xl">Triangle</h2>
+                    <p class="text-center pb-2 text-xl">Area = 0.5 X b X h</p>                      
+                     <div class="text-center pb-3">
+                      <input id="triangle-base" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="b">
+                      <span class="mr-3 ml-2 text-2xl">cm</span>
+                      <input id="triangle-height" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="h">
+                      <span class="text-2xl ml-2">cm</span>
+                     </div>
+                     <div>
+                      <p class="text-center text-3xl">Area:
+                      <span id="triangle-area"></span>
+                      <span>cm<sup>2</sup></span>                       
+                      </p>
+                     </div>                
+                    <div class="card-actions">
+                      <button onclick="calculateTriangleArea()" class="btn w-full bg-[#1090D8] text-[#fff] text-[20px]">Calculate</button>
+                    </div>
+                  </div>
+              </div>
+                <!-- Card name: Rhombus -->
+                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                  <figure>
+                      <img src="/geometry-genius-resources/images/triangle.png" alt="Shoes" /></figure>
+                  <div class="card-body ">
+                    <h2 class="text-center pt-3 text-2xl">Triangle</h2>
+                    <p class="text-center pb-2 text-xl">Area = 0.5 X b X h</p>                      
+                     <div class="text-center pb-3">
+                      <input id="triangle-base" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="b">
+                      <span class="mr-3 ml-2 text-2xl">cm</span>
+                      <input id="triangle-height" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="h">
+                      <span class="text-2xl ml-2">cm</span>
+                     </div>
+                     <div>
+                      <p class="text-center text-3xl">Area:
+                      <span id="triangle-area"></span>
+                      <span>cm<sup>2</sup></span>                       
+                      </p>
+                     </div>                
+                    <div class="card-actions">
+                      <button onclick="calculateTriangleArea()" class="btn w-full bg-[#1090D8] text-[#fff] text-[20px]">Calculate</button>
+                    </div>
+                  </div>
+              </div>
+                <!-- Card name: Pentagon -->
+                <div class="card card-compact w-86 bg-base-100 shadow-xl">
+                  <figure>
+                      <img src="/geometry-genius-resources/images/triangle.png" alt="Shoes" /></figure>
+                  <div class="card-body ">
+                    <h2 class="text-center pt-3 text-2xl">Triangle</h2>
+                    <p class="text-center pb-2 text-xl">Area = 0.5 X b X h</p>                      
+                     <div class="text-center pb-3">
+                      <input id="triangle-base" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="b">
+                      <span class="mr-3 ml-2 text-2xl">cm</span>
+                      <input id="triangle-height" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="h">
+                      <span class="text-2xl ml-2">cm</span>
+                     </div>
+                     <div>
+                      <p class="text-center text-3xl">Area:
+                      <span id="triangle-area"></span>
+                      <span>cm<sup>2</sup></span>                       
+                      </p>
+                     </div>                
+                    <div class="card-actions">
+                      <button onclick="calculateTriangleArea()" class="btn w-full bg-[#1090D8] text-[#fff] text-[20px]">Calculate</button>
+                    </div>
+                  </div>
+              </div>
+                <!-- Card name: Ellipse -->
+                <div class="card card-compact w-86 bg-base-100 shadow-xl">
+                  <figure>
+                      <img src="/geometry-genius-resources/images/triangle.png" alt="Shoes" /></figure>
+                  <div class="card-body ">
+                    <h2 class="text-center pt-3 text-2xl">Triangle</h2>
+                    <p class="text-center pb-2 text-xl">Area = 0.5 X b X h</p>                      
+                     <div class="text-center pb-3">
+                      <input id="triangle-base" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="b">
+                      <span class="mr-3 ml-2 text-2xl">cm</span>
+                      <input id="triangle-height" class="w-24 p-2 rounded-sm text-2xl border-0 bg-[#F1F1F1]" type="text" placeholder="h">
+                      <span class="text-2xl ml-2">cm</span>
+                     </div>
+                     <div>
+                      <p class="text-center text-3xl">Area:
+                      <span id="triangle-area"></span>
+                      <span>cm<sup>2</sup></span>                       
+                      </p>
+                     </div>                
+                    <div class="card-actions">
+                      <button onclick="calculateTriangleArea()" class="btn w-full bg-[#1090D8] text-[#fff] text-[20px]">Calculate</button>
+                    </div>
+                  </div>
+              </div> 
+            </div>
+             <!-- Area calculation container -->
+            <div class="w-86 border-2 border-gray-700 rounded-md">
+                <h3 class="text-3xl p-4">Area calculator</h3>
+                <div>
+                  <p class="text-center text-3xl">Area:
+                  <span id="triangle-area"></span>
+                  <span>cm<sup>2</sup></span>                       
+                  </p>
+                 </div> 
+            </div>
+        </div>
+    </main>
+    <script src="/script/triangle-calculation.js"></script>
+    <script src="/script/rectangle.js"></script>
+</body>
+</html>
